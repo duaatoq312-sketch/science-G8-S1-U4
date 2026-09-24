@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اختبار مادة العلوم - الصف الثامن</title>
+  <style>
+    body {
+      font-family: "Tahoma", sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .question-card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .question-card h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .controls {
+      text-align: center;
+      margin: 20px 0;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .progress {
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px 0;
+      height: 20px;
+    }
+    .progress-bar {
+      background: #27ae60;
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .timer {
+      font-size: 18px;
+      text-align: center;
+      margin: 10px 0;
+      color: #c0392b;
+    }
+    .counter {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .correct {
+      background-color: #d4edda;
+    }
+    .incorrect {
+      background-color: #f8d7da;
+    }
+    .review {
+      margin-top: 20px;
+      padding: 15px;
+      background: #ecf0f1;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>اختبار مادة العلوم للصف الثامن<br>الفصل الدراسي الأول / الوحدة الرابعة: علوم الأرض والبيئة</h1>
+  </header>
+  <div class="container">
+    <div class="timer" id="timer">الوقت المتبقي: 10:00</div>
+    <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="counter" id="counter">0 / 10</div>
+    <div id="questions"></div>
+    <div class="controls">
+      <button id="submit">إنهاء الاختبار</button>
+      <button id="retry" style="display:none;">إعادة الاختبار</button>
+    </div>
